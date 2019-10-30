@@ -2,9 +2,6 @@
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
-
-
-
 #[derive(Debug)]
 pub struct Guess {
     value: i32,
@@ -22,15 +19,6 @@ impl Guess {
         self.value
     } //restricting us to not to initialize the value field given in main function.
 }
-
-
-
-
-
-
-
-
-
 fn main() {
     println!("Welcome To Guessing Game");
     let sec_num: i32 = rand::thread_rng().gen_range(1, 101);
