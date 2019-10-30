@@ -9,18 +9,22 @@ pub struct Guess {
 impl Guess {
     pub fn new(value: i32) -> Guess {
         if value < 0 || value > 101 {
-            panic!("You entered the number out of range. You entered {:#?}",value)
+            panic!(
+                "You entered the number out of range. You entered {:#?}",
+                value
+            )
         }
-        Guess {
-            value
-        }
+
+        Guess { value }
     }
-    pub fn value (&self) -> i32 {
+    pub fn value(&self) -> i32 {
         self.value
     } //restricting us to not to initialize the value field given in main function.
 }
+
 fn main() {
     println!("Welcome To Guessing Game");
+
     let sec_num: i32 = rand::thread_rng().gen_range(1, 101);
     println!("secrete Number is {}", sec_num);
     loop {
